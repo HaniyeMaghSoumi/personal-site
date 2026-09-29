@@ -1,0 +1,101 @@
+---
+import '../styles.css';
+
+const roles = ['PRODUCT MANAGER', 'FINTECH × PAYMENTS', 'TECHNICAL SUPPORT', 'AI EXPLORER'];
+const capabilities = [
+  { n: '01', title: 'PRODUCT', text: 'From ambiguous requirements to user stories, backlogs, UAT and launch.' },
+  { n: '02', title: 'PAYMENTS', text: 'Digital payments, IPG, wallets, cards and merchant onboarding.' },
+  { n: '03', title: 'TECH', text: 'API integrations, Postman, Swagger/OpenAPI, SQL and technical troubleshooting.' },
+  { n: '04', title: 'AUTOMATION', text: 'Breaking complex workflows into smaller systems and improving the path through them.' },
+];
+const experiments = ['AI AGENTS', 'AUTOMATION', 'PYTHON', 'PRODUCT SYSTEMS'];
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="theme-color" content="#07090b" />
+  <meta name="description" content="Haniye Maghsoumi — Product Manager working across product, technology and digital payments." />
+  <title>Haniye Maghsoumi — Product × Tech × FinTech</title>
+</head>
+<body>
+  <div class="noise"></div>
+  <canvas id="network" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Haniye home"><span>H</span>ANIYE<span class="dot">.</span>M</a>
+    <nav>
+      <a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#lab">AI LAB</a><a href="#contact">CONTACT</a>
+    </nav>
+    <a class="status" href="https://www.linkedin.com/in/haniye-maghsoumi-a2769a176/" target="_blank" rel="noreferrer"><i></i> OPEN TO CONNECTIONS ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-kicker reveal"><span class="mono">SYSTEM / 001</span><span>PRODUCT × TECHNOLOGY × HUMAN PROBLEMS</span></div>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow reveal">HELLO, I'M HANIYE.</p>
+          <h1 class="reveal">I TURN<br /><em>COMPLEXITY</em><br />INTO CLARITY.</h1>
+          <p class="hero-copy reveal">Product Manager with a technical edge, working across digital payments, merchant onboarding, integrations and the details that make products actually work.</p>
+          <div class="hero-actions reveal"><a class="button magnetic" href="#work">EXPLORE MY SYSTEM <span>↘</span></a><a class="text-link" href="https://www.linkedin.com/in/haniye-maghsoumi-a2769a176/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div>
+        </div>
+        <div class="orbital reveal" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+          <div class="core"><span>PM</span><small>BUILD / LEARN / ITERATE</small></div>
+          <div class="node n1">PRODUCT</div><div class="node n2">API</div><div class="node n3">PAYMENT</div><div class="node n4">USER</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section id="work" class="section work">
+      <div class="section-head reveal"><span class="index">01</span><div><span class="eyebrow">THE SYSTEM</span><h2>Where product meets the real world.</h2></div></div>
+      <div class="cap-grid">
+        {capabilities.map((item) => <article class="cap-card reveal magnetic-card"><span class="card-no">{item.n}</span><h3>{item.title}</h3><p>{item.text}</p><span class="arrow">↗</span></article>)}
+      </div>
+      <div class="terminal reveal">
+        <div class="terminal-top"><span></span><span></span><span></span><b>haniye@portfolio ~ /work</b></div>
+        <div class="terminal-body"><p><span class="green">$</span> whoami</p><p class="muted">Product Manager · FinTech · Technical Support</p><p><span class="green">$</span> focus --now</p><p class="muted">AI agents / automation / product systems</p><p><span class="green">$</span> philosophy</p><p class="accent">“Break the big problem into small pieces. Then build the path.”</p><span class="prompt">█</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-head reveal"><span class="index">02</span><div><span class="eyebrow">ABOUT THE HUMAN</span><h2>Curiosity is part of my toolkit.</h2></div></div>
+      <div class="about-layout">
+        <div class="manifesto reveal"><p>I love understanding <strong>why</strong> people behave the way they do, <strong>how</strong> systems behave under pressure, and <strong>what</strong> happens when you try something new.</p><p>Psychology books, animals, cooking, baking, music and nature keep me grounded. They remind me that good things are rarely linear.</p><p>Like seasons, we change. Sometimes everything is green. Sometimes there are only bare branches. The roots are still there.</p></div>
+        <div class="hobby-orbit reveal"><div class="hobby h1">PSYCHOLOGY</div><div class="hobby h2">MUSIC</div><div class="hobby h3">ANIMALS</div><div class="hobby h4">COOKING</div><div class="hobby h5">NATURE</div><div class="hobby h6">LEARNING</div><div class="hobby-center">ROOTS<br /><small>→ GROW →</small></div></div>
+      </div>
+    </section>
+
+    <section id="lab" class="section lab">
+      <div class="section-head reveal"><span class="index">03</span><div><span class="eyebrow">EXPERIMENTATION</span><h2>AI LAB / always becoming.</h2></div></div>
+      <p class="lab-intro reveal">I am exploring how AI and automation can turn repetitive work into intelligent systems — without losing the human thinking behind the product.</p>
+      <div class="lab-grid">
+        {experiments.map((item, i) => <div class="lab-card reveal"><span>0{i+1}</span><strong>{item}</strong><div class="meter"><i style={`--w:${72 - i*11}%`}></i></div><small>EXPLORING</small></div>)}
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-card reveal">
+        <span class="eyebrow">04 / CONTACT</span>
+        <h2>Let's build something<br /><em>meaningful.</em></h2>
+        <p>For product conversations, collaboration, curious ideas, or simply saying hello.</p>
+        <div class="contact-links"><a class="button magnetic" href="mailto:haniye.maghsoumi@gmail.com">SAY HELLO <span>↗</span></a><a class="text-link" href="https://www.linkedin.com/in/haniye-maghsoumi-a2769a176/" target="_blank" rel="noreferrer">LINKEDIN ↗</a></div>
+      </div>
+      <footer><span>© {new Date().getFullYear()} HANIYE MAGHSOUMI</span><span>MADE WITH CURIOSITY · NOT PERFECTION</span><span class="mono">SYSTEM / END</span></footer>
+    </section>
+  </main>
+  <script>
+    const canvas = document.querySelector('#network'), ctx = canvas.getContext('2d');
+    let w, h, pts=[]; const mouse={x:-9999,y:-9999};
+    function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:55},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+    addEventListener('resize',resize); addEventListener('pointermove',e=>{mouse.x=e.clientX;mouse.y=e.clientY}); resize();
+    function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;const d=Math.hypot(p.x-mouse.x,p.y-mouse.y);if(d<150){p.x+=(mouse.x-p.x)*.001;p.y+=(mouse.y-p.y)*.001}ctx.beginPath();ctx.arc(p.x,p.y,1.2,0,Math.PI*2);ctx.fillStyle='rgba(115,235,198,.35)';ctx.fill();}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const d=Math.hypot(pts[i].x-pts[j].x,pts[i].y-pts[j].y);if(d<115){ctx.strokeStyle=`rgba(115,235,198,${.08*(1-d/115)})`;ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}requestAnimationFrame(draw)} draw();
+    const glow=document.querySelector('.cursor-glow'); addEventListener('pointermove',e=>{glow.style.transform=`translate(${e.clientX}px,${e.clientY}px)`});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+    document.querySelectorAll('.magnetic').forEach(el=>el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.08}px,${(e.clientY-r.top-r.height/2)*.08}px)`;el.addEventListener('pointerleave',()=>el.style.transform='',{once:true})}));
+  </script>
+</body>
+</html>
